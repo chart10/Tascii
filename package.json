@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite ./frontend",
+    "dev-backend": "concurrently \"npx tsc --watch --project tsconfig.backend.json\" \"nodemon -q dist/backend/server.js\"",
     "run-backend": "node dist/backend/server.js",
     "build-frontend": "tsc ./frontend/src/main.tsx && vite build",
     "build-backend": "tsc --project tsconfig.backend.json",
