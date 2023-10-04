@@ -5,7 +5,7 @@ const taskColumn = () => {
   return (
     <div className='task-column'>
       <h3>taskColumn</h3>
-      <SingleTask />
+      <SingleTask taskName='Feed the Cat' />
     </div>
   );
 };
