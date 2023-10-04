@@ -5,11 +5,11 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('Hello World! The backend server for Tascii is live!');
 });
 
 pingRoute(app);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Tascii server listening on port ${port}`);
 });
