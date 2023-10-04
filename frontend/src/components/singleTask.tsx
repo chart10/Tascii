@@ -1,4 +1,4 @@
 const singleTask = () => {
-  return <div>singleTask</div>;
+  return <div className='single-task'>singleTask</div>;
 };
 export default singleTask;
