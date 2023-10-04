@@ -1,0 +1,7 @@
+.single-task {
+  width: 90%;
+  height: 200px;
+  margin: 0 auto;
+  border: 2px solid rgb(25, 25, 25, 0.5);
+  border-radius: 20px;
+}

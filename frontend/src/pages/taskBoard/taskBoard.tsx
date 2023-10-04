@@ -1,9 +1,9 @@
 import TaskColumn from '../../components/taskColumn/taskColumn';
+import './taskBoard.css';
 
 const taskBoard = () => {
   return (
-    <div className='page'>
-      <h2>Task Board</h2>
+    <div className='task-board'>
       <TaskColumn />
       <TaskColumn />
       <TaskColumn />

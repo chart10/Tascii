@@ -1,4 +1,5 @@
 import SingleTask from '../singleTask/singleTask';
+import './taskColumn.css';
 
 const taskColumn = () => {
   return (
