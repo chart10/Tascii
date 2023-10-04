@@ -1,4 +1,4 @@
-import TaskColumn from '../components/taskColumn';
+import TaskColumn from '../../components/taskColumn/taskColumn';
 
 const taskBoard = () => {
   return (

@@ -1,4 +1,4 @@
-import TaskBoard from './pages/taskBoard';
+import TaskBoard from './pages/taskBoard/taskBoard';
 import './App.css';
 
 function App() {

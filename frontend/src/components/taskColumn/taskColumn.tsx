@@ -1,4 +1,4 @@
-import SingleTask from './singleTask';
+import SingleTask from '../singleTask/singleTask';
 
 const taskColumn = () => {
   return (
