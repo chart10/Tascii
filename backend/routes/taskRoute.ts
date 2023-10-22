@@ -27,5 +27,13 @@ router.route('/:id').patch(async (req, res) => {
   }
   res.status(200).send({ msg: 'success', task });
 });
+router.route('/:id').delete(async (req, res) => {
+  const task = await taskService.deleteTask(req.params.id);
+  if (!task) {
+    res.status(404).send({ msg: 'No task to delete' });
+    return;
+  }
+  res.status(200).send({ msg: 'Task deleted successfully' });
+});
 
 export default router;

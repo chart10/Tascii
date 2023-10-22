@@ -10,10 +10,15 @@ const createTask = async (name: string, completed: boolean = false) => {
 };
 
 const modifyTask = async (id: string, updateData: object) => {
-  const task = await Task.findOneAndUpdate({ _id: id }, updateData, {
+  const task = await Task.findByIdAndUpdate(id, updateData, {
     new: true,
     runValidators: true,
   });
+  return task;
+};
+
+const deleteTask = async (id: string) => {
+  const task = await Task.findByIdAndDelete(id);
   return task;
 };
 
@@ -22,4 +27,4 @@ const modifyTask = async (id: string, updateData: object) => {
 //      Delete task
 //      Filter tasks
 
-export default { getAllTasks, createTask, modifyTask };
+export default { getAllTasks, createTask, modifyTask, deleteTask };
