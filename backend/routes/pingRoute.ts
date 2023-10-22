@@ -1,7 +1,13 @@
-const pingRoute = (app) => {
-  app.get('/ping', (req, res) => {
-    res.send('Pong!');
-  });
-};
+import { Router } from 'express';
 
-export default pingRoute;
+const router = Router();
+
+router.route('/').get((req, res) => {
+  res.send('Hello World! The backend server for Tascii is live!');
+});
+
+router.route('/ping').get((req, res) => {
+  res.send('Pong!');
+});
+
+export default router;
