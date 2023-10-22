@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
   res.send('Hello World! The backend server for Tascii is live!');
 });
 
-pingRoute(app);
+app.use('/ping', pingRoute);
 
 app.listen(port, () => {
   console.log(`Tascii server listening on port ${port}`);
