@@ -19,4 +19,13 @@ router.route('/').post(async (req, res) => {
   res.status(200).send(task);
 });
 
+router.route('/:id').patch(async (req, res) => {
+  const task = await taskService.modifyTask(req.params.id, req.body);
+  if (!task) {
+    res.status(404).send({ msg: 'Not found' });
+    return;
+  }
+  res.status(200).send({ msg: 'success', task });
+});
+
 export default router;

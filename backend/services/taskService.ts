@@ -9,4 +9,17 @@ const createTask = async (name: string, completed: boolean = false) => {
   return Task.create(task);
 };
 
-export default { getAllTasks, createTask };
+const modifyTask = async (id: string, updateData: object) => {
+  const task = await Task.findOneAndUpdate({ _id: id }, updateData, {
+    new: true,
+    runValidators: true,
+  });
+  return task;
+};
+
+// Task Routes:
+//      Modify task
+//      Delete task
+//      Filter tasks
+
+export default { getAllTasks, createTask, modifyTask };
