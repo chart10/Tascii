@@ -10,7 +10,12 @@ router.route('/').get(async (req, res) => {
 });
 
 router.route('/').post(async (req, res) => {
-  const task = await taskService.createTask();
+  console.log(req.body);
+  if (!req.body.name) {
+    res.status(400).send('You must include a name for the new task.');
+    return;
+  }
+  const task = await taskService.createTask(req.body.name, req.body.completed);
   res.status(200).send(task);
 });
 

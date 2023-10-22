@@ -4,8 +4,9 @@ const getAllTasks = async () => {
   return Task.find({});
 };
 
-const createTask = async () => {
-  return 'task will be created in this line';
+const createTask = async (name: string, completed: boolean = false) => {
+  const task = { name, completed };
+  return Task.create(task);
 };
 
 export default { getAllTasks, createTask };
