@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import pingRouter from './routes/pingRoute.js';
+import taskRouter from './routes/taskRoute.js';
 import connectDB from './daos/connectDB.js';
 
 dotenv.config();
@@ -9,6 +10,7 @@ const app = express();
 const port = 3000;
 
 app.use('/api/v1/', pingRouter);
+app.use('/api/v1/task/', taskRouter);
 
 const start = async (url) => {
   try {
