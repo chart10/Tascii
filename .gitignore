@@ -41,3 +41,6 @@ jspm_packages
 public/
 dist/
 tsconfig.node.tsbuildinfo
+
+# Secrets
+.env
