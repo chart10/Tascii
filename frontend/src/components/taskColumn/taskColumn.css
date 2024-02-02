@@ -2,6 +2,6 @@
   background: snow;
   color: black;
   width: 25vw;
-  height: 200vh;
-  border-radius: 20px;
+  height: fit-content;
+  border-radius: 4px;
 }
