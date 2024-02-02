@@ -4,8 +4,12 @@ const getAllTasks = async () => {
   return Task.find({});
 };
 
-const createTask = async (name: string, completed: boolean = false) => {
-  const task = { name, completed };
+const createTask = async (
+  name: string,
+  description: string,
+  columnId: string
+) => {
+  const task = { name, description, columnId };
   return Task.create(task);
 };
 

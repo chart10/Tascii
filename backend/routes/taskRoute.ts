@@ -18,7 +18,11 @@ router.route('/').post(async (req, res) => {
       .send('You must include a name for the new task.');
     return;
   }
-  const task = await taskService.createTask(req.body.name, req.body.completed);
+  const task = await taskService.createTask(
+    req.body.name,
+    req.body.description,
+    req.body.columnId
+  );
   res.status(StatusCodes.OK).send(task);
 });
 
